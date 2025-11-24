@@ -1,0 +1,29 @@
+extends ../layout/app
+block page
+  include ../chunk/header
+  main
+    .main-banner
+      .main-banner__image
+        img(src="./img/background-full.webp", alt="banner")
+      .main-banner__top
+        .container.c-container
+          .row
+            .col-9
+              .main-banner__top-logo
+                img(src="./img/shelkinvest.svg", alt="logo")
+      .main-banner__bottom
+        .main-banner__bottom-image
+          img(src="./img/trava.webp", alt="trava")
+        .container.c-container.main-banner__bottom-content
+          .row.justify-content-between
+            .col-3
+              button.main-banner__button
+                span Получить консультацию
+                .main-banner__button-arrow
+                  +icon("button-arrow", "main-banner__button-arrow-icon")
+            .col-6
+              .main-banner__bottom-text <span class="color-accent">Растениеводческая</span> компания <br>специализирующаяся на выращивании <span class="color-accent">семян нута</span>
+        .main-banner__bottom-shadows
+          .main-banner__bottom-shadow-1
+          .main-banner__bottom-shadow-2
+  include ../chunk/footer

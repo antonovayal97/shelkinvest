@@ -1,0 +1,41 @@
+header.header
+    .container.c-container
+        .row
+            .col-12.header__inner
+                .header__logo
+                    .header__logo-image
+                        img(src="./img/header-logo.svg", alt="logo")
+                    .header__logo-text
+                        span.header__logo-text-title ООО «Щелканинвест»
+                        span.header__logo-text-description Растениеводческая компания 
+                .header__menu
+                    ul.header__menu-list
+                        li.header__menu-item.header__menu-item--dropdown
+                            a.header__menu-link(href="#")
+                                span.header__menu-link-text Каталог семян
+                                +icon("carbon_caret-down", "header__menu-link-icon")
+                        li.header__menu-item
+                            a.header__menu-link(href="#") Пресс-центр
+                        li.header__menu-item
+                            a.header__menu-link(href="#") Контакты
+                .header__info
+                    .header__contacts
+                        a(href="email:Chelkan_invest@mail.ru").header__contacts-email
+                            +icon("material-symbols-light_mail", "header__contacts-email-icon")
+                            span.header__contacts-email-text Chelkan_invest@mail.ru
+                        .header__contacts-phone-wrapper
+                            a(href="tel:8 (84454) 5-46-31").header__contacts-phone
+                                +icon("carbon_phone-voice-filled", "header__contacts-phone-icon")
+                                span.header__contacts-phone-content
+                                  span.header__contacts-phone-content-text 8 (84454) 5-46-31
+                                  +icon("carbon_caret-down", "header__contacts-phone-content-icon")
+                            ul.header__contacts-phone-dropdown
+                                li.header__contacts-phone-dropdown-item
+                                    a.header__contacts-phone-dropdown-link(href="tel:+79999999999") 8 (84454) 5-46-31
+                                li.header__contacts-phone-dropdown-item
+                                    a.header__phone-dropdown-link(href="tel:+79999999998") 8 (84454) 5-46-32
+                                li.header__contacts-phone-dropdown-item
+                                    a.header__contacts-phone-dropdown-link(href="tel:+79999999997") 8 (84454) 5-46-33 
+                    .header__work-time Работаем с 8 - 17 ч, <br>перерыв с 12 - 13 ч
+                .header__button
+                    a(href="#").button Заказать звонок

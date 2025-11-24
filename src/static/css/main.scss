@@ -1,0 +1,224 @@
+:root {
+  --color-dark-blue: #0c2549;
+  --color-yellow: #eaff00;
+}
+@import "./fonts.scss";
+@import "./font-mixin.scss";
+@import "./media-mixin.scss";
+@import "./reset.scss";
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.c-container {
+  max-width: calc(1500px + 2 * var(--bs-gutter-x) * 0.5);
+}
+
+.color-accent {
+  color: var(--color-yellow);
+}
+.main-banner {
+  position: relative;
+  width: 100%;
+  height: 45.35vw;
+  overflow: hidden;
+  &--animated {
+    .main-banner__image img {
+      object-position: 0 29%;
+    }
+    .main-banner__bottom-image {
+      bottom: 0;
+    }
+    .main-banner__top-logo {
+      margin-top: calc(17.15vw - 50px);
+    }
+    .main-banner__top::after {
+      opacity: 1;
+    }
+    .main-banner__bottom-shadow-1 {
+      bottom: calc((-161 / 1920) * 100vw);
+    }
+    .main-banner__bottom-shadow-2 {
+      bottom: calc(-340 / 1920 * 100vw);
+    }
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 0%;
+    }
+  }
+  &__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 23.5vw;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(55, 165, 249, 0.4) 37.22%,
+        rgba(12, 37, 73, 0.4) 94.26%
+      );
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      transition-delay: 100ms;
+    }
+    &-logo {
+      margin-top: calc(29.15vw - 50px);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__bottom {
+    position: absolute;
+    bottom: 2.7vw;
+    left: 0;
+    width: 100%;
+    height: 25.9vw;
+    z-index: 1;
+    &-image {
+      position: absolute;
+      bottom: -24%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-content {
+      position: relative;
+      z-index: 3;
+    }
+    &-shadows {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+    &-shadow {
+      &-1 {
+        z-index: 1;
+        position: absolute;
+        bottom: calc((-700 / 1920) * 100vw);
+        left: calc(-15 / 1920 * 100vw);
+        width: calc(1958 / 1920 * 100vw);
+        height: calc(514.8 / 1920 * 100vw);
+        transform: rotateZ(-4.32deg);
+        background: rgba(0, 8, 66, 0.32);
+        /* Добавьте вендорные префиксы */
+        filter: blur(63.3px);
+      }
+      &-2 {
+        z-index: 2;
+        position: absolute;
+        bottom: calc(-700 / 1920 * 100vw);
+        right: calc(-90 / 1920 * 100vw);
+        width: calc(1075 / 1920 * 100vw);
+        height: calc(514.8 / 1920 * 100vw);
+        transform: rotateZ(-18.01deg);
+        background: rgba(0, 1, 16, 0.32);
+        filter: blur(115.5px);
+      }
+    }
+    &-text {
+      position: relative;
+      justify-self: flex-end;
+      margin-top: 132px;
+      border-radius: 20px;
+      width: 711px;
+      padding: 24px 37.5px;
+      color: #fff;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 100%;
+      background: linear-gradient(
+        174.68deg,
+        rgba(0, 0, 0, 0.06) 22.7%,
+        rgba(0, 0, 0, 0) 159%
+      );
+
+      filter: drop-shadow(0px -1px 18.1px rgba(0, 0, 0, 0.25));
+
+      backdrop-filter: blur(16.3px);
+      -webkit-backdrop-filter: blur(16.3px);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid transparent;
+        border-radius: 22px;
+        opacity: 0.5;
+        background: linear-gradient(
+            158deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%
+          )
+          border-box;
+        mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: xor;
+        pointer-events: none;
+      }
+    }
+  }
+  &__button {
+    margin-top: 159px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /*width: 314px;*/
+    height: 62px;
+    padding-right: 17px;
+    padding-left: 41px;
+    background-color: rgba(209, 243, 73, 1);
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.8%;
+    box-shadow: 0 35px 41.6px -8px rgba(12, 12, 13, 0.4);
+    &-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #000;
+      border-radius: 100px;
+      &-icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+@import "./chunk/header.scss";
