@@ -54,6 +54,7 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 22px;
+      position: relative;
       &--dropdown {
         a {
           display: flex;
@@ -71,6 +72,7 @@
       &-icon {
         width: 14px;
         height: 14px;
+        transition: transform 0.3s ease;
       }
       &-text {
       }
@@ -78,10 +80,42 @@
   }
 
   &__submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    z-index: 1000;
     &-item {
+      list-style: none;
     }
     &-link {
+      display: block;
+      padding: 12px 20px;
+      color: var(--color-dark-blue);
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: rgba(12, 37, 73, 0.1);
+      }
     }
+  }
+  &__menu-item--dropdown:hover &__submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  &__menu-item--dropdown:hover &__menu-link-icon {
+    transform: rotate(180deg);
   }
 
   &__info {
@@ -120,6 +154,7 @@
       padding: 8px;
       padding-top: 6px;
       &-wrapper {
+        position: relative;
       }
       &-icon {
         width: 20px;
@@ -133,14 +168,47 @@
         &-icon {
           width: 14px;
           height: 14px;
+          transition: transform 0.3s ease;
         }
       }
       &-dropdown {
-        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 8px;
+        min-width: 200px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        padding: 8px 0;
+        z-index: 1000;
+        list-style: none;
         &-item {
+          list-style: none;
         }
         &-link {
+          display: block;
+          padding: 12px 20px;
+          color: var(--color-dark-blue);
+          text-decoration: none;
+          transition: background-color 0.2s ease;
+          &:hover {
+            background-color: rgba(12, 37, 73, 0.1);
+          }
         }
+      }
+      &-wrapper:hover &-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      &-wrapper:hover &-content-icon {
+        transform: rotate(180deg);
       }
     }
   }
