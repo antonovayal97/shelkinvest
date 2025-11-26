@@ -47,6 +47,48 @@
     .main-banner__bottom-shadow-2 {
       bottom: calc(-340 / 1920 * 100vw);
     }
+    @include max-lg {
+      .main-banner__image img {
+        object-position: 0 29%;
+      }
+      .main-banner__bottom-image {
+        bottom: -24%;
+      }
+      .main-banner__top-logo {
+        margin-top: calc(39.15vh - 50px);
+      }
+      .main-banner__top::after {
+        opacity: 1;
+        height: 100%;
+      }
+      .main-banner__bottom-shadow-1 {
+        bottom: calc((-161 / 1920) * 100vw);
+      }
+      .main-banner__bottom-shadow-2 {
+        bottom: calc(-340 / 1920 * 100vw);
+      }
+    }
+    @include max-sm {
+      .main-banner__image img {
+        object-position: 0 29%;
+      }
+      .main-banner__bottom-image {
+        bottom: -24%;
+      }
+      .main-banner__top-logo {
+        margin-top: calc(41vh - 37px);
+      }
+      .main-banner__top::after {
+        opacity: 1;
+        height: 100%;
+      }
+      .main-banner__bottom-shadow-1 {
+        bottom: calc((-161 / 1920) * 100vw);
+      }
+      .main-banner__bottom-shadow-2 {
+        bottom: calc(-340 / 1920 * 100vw);
+      }
+    }
   }
   &__image {
     position: absolute;
@@ -129,7 +171,9 @@
       position: relative;
       z-index: 3;
       @include max-lg {
-        top: 400px;
+        position: absolute;
+        top: unset;
+        bottom: 100px;
       }
     }
     &-shadows {
@@ -185,6 +229,11 @@
       @include max-lg {
         margin-top: 0;
         justify-self: flex-start;
+        font-size: 18px;
+      }
+      @include max-md {
+        width: 100%;
+        text-align: center;
       }
       &::before {
         content: "";
@@ -228,6 +277,8 @@
     box-shadow: 0 35px 41.6px -8px rgba(12, 12, 13, 0.4);
     @include max-lg {
       margin-top: 32px;
+    }
+    @include max-md {
       justify-self: center;
     }
     &-arrow {
