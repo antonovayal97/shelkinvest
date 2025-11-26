@@ -50,3 +50,32 @@ header.header
                     a(href="#").header__button-mobile
                         +icon("carbon_phone-voice-filled", "header__button-mobile-icon")
                     a(href="#").button Заказать звонок
+    .header__mobile-overlay
+    .header__mobile-menu
+        .header__mobile-menu-content
+            ul.header__mobile-menu-list
+                li.header__mobile-menu-item.header__mobile-menu-item--dropdown
+                    button.header__mobile-menu-link.header__mobile-menu-link--toggle
+                        span.header__mobile-menu-link-text Каталог семян
+                        +icon("carbon_caret-down", "header__mobile-menu-link-icon")
+                    ul.header__mobile-submenu
+                        li.header__mobile-submenu-item
+                            a.header__mobile-submenu-link(href="#") Семена овощей
+                        li.header__mobile-submenu-item
+                            a.header__mobile-submenu-link(href="#") Семена цветов
+                        li.header__mobile-submenu-item
+                            a.header__mobile-submenu-link(href="#") Семена злаков
+                li.header__mobile-menu-item
+                    a.header__mobile-menu-link(href="#") Пресс-центр
+                li.header__mobile-menu-item
+                    a.header__mobile-menu-link(href="#") Контакты
+            .header__mobile-contacts
+                a(href="email:Chelkan_invest@mail.ru").header__mobile-contacts-email
+                    +icon("material-symbols-light_mail", "header__mobile-contacts-email-icon")
+                    span.header__mobile-contacts-email-text Chelkan_invest@mail.ru
+                .header__mobile-contacts-phone-wrapper
+                    a(href="tel:8 (84454) 5-46-31").header__mobile-contacts-phone
+                        +icon("carbon_phone-voice-filled", "header__mobile-contacts-phone-icon")
+                        span.header__mobile-contacts-phone-text 8 (84454) 5-46-31
+                .header__mobile-work-time Работаем с 8 - 17 ч, перерыв с 12 - 13 ч
+            a(href="#").header__mobile-button.button Заказать звонок
