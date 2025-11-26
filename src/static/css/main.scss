@@ -173,7 +173,7 @@
       @include max-lg {
         position: absolute;
         top: unset;
-        bottom: 100px;
+        bottom: 150px;
       }
     }
     &-shadows {
@@ -233,7 +233,8 @@
       }
       @include max-md {
         width: 100%;
-        text-align: center;
+        margin-right: calc(var(--bs-gutter-x) * 0.5);
+        margin-left: calc(var(--bs-gutter-x) * 0.5);
       }
       &::before {
         content: "";
