@@ -2,6 +2,8 @@ header.header
     .container.c-container
         .row
             .col-12.header__inner
+                button.header__burger
+                    +icon("burger-menu", "header__burger-icon")
                 a(href="#").header__logo
                     .header__logo-image
                         img(src="./img/header-logo.svg", alt="logo")
@@ -45,4 +47,6 @@ header.header
                                     a.header__contacts-phone-dropdown-link(href="tel:+79999999997") 8 (84454) 5-46-33 
                     .header__work-time Работаем с 8 - 17 ч, <br>перерыв с 12 - 13 ч
                 .header__button
+                    a(href="#").header__button-mobile
+                        +icon("carbon_phone-voice-filled", "header__button-mobile-icon")
                     a(href="#").button Заказать звонок
