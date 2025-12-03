@@ -1,0 +1,196 @@
+.footer {
+  background-color: rgba(44, 73, 44, 1);
+  color: #fff;
+  .c-contacts__phone-dropdown,
+  .c-submenu {
+    top: unset;
+    bottom: 100%;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 24px;
+    @include max-md {
+      padding-top: 3px;
+      padding-bottom: 19px;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-left {
+      display: flex;
+      align-items: center;
+      @include max-md {
+        flex-direction: column;
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: flex-start;
+      gap: 36px;
+      padding-top: 28px;
+      @include max-md {
+        width: 100%;
+        padding-top: 12px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+      }
+    }
+  }
+  &__button-n-worktime {
+    width: 100%;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    @include max-md {
+      flex-direction: column;
+      padding-top: 15px;
+      padding-bottom: 59px;
+      gap: 12px;
+    }
+    &-links {
+      display: flex;
+      gap: 16px;
+    }
+    &-link {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &-pr-volga {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      &-text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0%;
+      }
+      &-link {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-offset: 0%;
+        text-decoration-thickness: 0%;
+        text-decoration-skip-ink: auto;
+        color: #d1f349;
+      }
+    }
+  }
+  &__menu {
+    margin-left: 64px;
+    @include max-lg {
+      display: none;
+    }
+
+    .c-menu-item:hover {
+      color: rgba(209, 243, 73, 1);
+    }
+    .c-menu-link-icon {
+      color: #fff;
+    }
+  }
+  &__mobile-menu {
+    display: none;
+    .c-mobile-menu-link,
+    .c-mobile-submenu-link {
+      color: #fff;
+      @include max-md {
+        justify-content: center;
+      }
+    }
+    @include max-md {
+      display: block;
+    }
+
+    .c-mobile-menu-list {
+      margin-bottom: 0;
+    }
+  }
+  &__logo {
+    .logo__image {
+      padding: 20px 6px 23px 7px;
+      flex-shrink: 0;
+      img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+  &__contacts {
+    font-weight: 700;
+    @include max-xl {
+      display: none;
+    }
+    @include max-md {
+      display: block;
+    }
+    .c-contacts__phone-wrapper {
+      @include max-md {
+        display: none;
+      }
+    }
+    .c-mobile-menu-item {
+      display: none;
+      @include max-md {
+        display: block;
+        margin-bottom: 0;
+      }
+    }
+    .c-contacts__phone-content-text,
+    .c-mobile-submenu-link {
+      color: #fff;
+    }
+    .c-contacts__phone-content-text {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    .c-contacts__phone-content-icon {
+      color: #fff;
+    }
+  }
+  &__button {
+    .button {
+      padding: 12px 84px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.8%;
+      box-shadow: 0px 35px 41.6px -8px rgba(0, 0, 0, 0.4);
+    }
+  }
+  &__worktime {
+    margin-top: 8px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    @include max-md {
+      margin-top: 14px;
+    }
+    b {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  hr {
+    margin: 0;
+    color: inherit;
+    border: 0;
+    border: 1px #869b474d solid;
+    opacity: 1;
+  }
+}

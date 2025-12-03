@@ -1,3 +1,139 @@
 .page-loader
     .spinner
-footer
+button.page-scroller
+    +icon("button-arrow", "page-scroller-icon")
+div(class="hystmodal",id="modal-1",aria-hidden="true")
+    .hystmodal__wrap
+        div(class="hystmodal__window", role="dialog", aria-modal="true")
+            .c-modal
+                .c-modal__block
+                    button(data-hystclose).c-modal__close
+                        +icon("modal-close", "c-modal__close-icon")
+                    .c-modal__title
+                        span Свяжемся с вами <br>как можно скорее
+                    form.c-modal__form
+                        input(type="text", placeholder="Ваше имя", class="c-input")
+                        input(type="phone", placeholder="Телефон для связи*", class="c-input c-phone-input")
+                        .consult__check
+                            label.c-checkbox-wrap
+                                input(type="checkbox", name="")
+                                span.c-checkbox
+                                    +icon("c-check", "c-checkbox-icon")
+                            .consult__check-text
+                                span Я соглашаюсь на обработку
+                                a(href="#") персональных данных
+                        .c-modal__button
+                            button(type="submit", data-hystmodal="#modal-2").button Заказать звонок
+                .c-modal__required 
+                    span *
+                    span — обязательные поля для заполнения
+div(class="hystmodal",id="modal-2",aria-hidden="true")
+    .hystmodal__wrap
+        div(class="hystmodal__window", role="dialog", aria-modal="true")
+            .c-modal
+                .c-modal__block
+                    button(data-hystclose).c-modal__close
+                        +icon("modal-close", "c-modal__close-icon")
+                    .c-modal__title
+                        span Свяжемся с вами <br>как можно скорее
+                    form.c-modal__form
+                        input(type="phone", placeholder="Телефон для связи", class="c-input c-phone-input")
+                        .consult__check
+                            label.c-checkbox-wrap
+                                input(type="checkbox", name="")
+                                span.c-checkbox
+                                    +icon("c-check", "c-checkbox-icon")
+                            .consult__check-text
+                                span Я соглашаюсь на обработку
+                                a(href="#") персональных данных
+                        .c-modal__button
+                            button(type="submit", data-hystmodal="#modal-2").button Заказать звонок
+                .c-modal__tree
+                    img(src="./img/form-tree.svg", alt="")
+footer.footer
+    .container.c-container
+        .row
+            .col-12.footer__top
+                .footer__top-left
+                    a(href="/").logo.footer__logo
+                        .logo__image
+                            img(src="./img/footer-logo.svg", alt="logo")
+                        .logo__text
+                            span.logo__text-title ООО «Щелканинвест»
+                            span.logo__text-description Растениеводческая компания 
+                    .c-menu.footer__menu
+                        ul.c-menu-list
+                            li.c-menu-item.c-menu-item--dropdown
+                                a.c-menu-link(href="#")
+                                    span.c-menu-link-text Каталог семян
+                                    +icon("carbon_caret-down", "c-menu-link-icon")
+                                ul.c-submenu
+                                    li.c-submenu-item
+                                        a.c-submenu-link(href="#") Семена овощей
+                                    li.c-submenu-item
+                                        a.c-submenu-link(href="#") Семена цветов
+                            li.c-menu-item
+                                a.c-menu-link(href="#") Пресс-центр
+                            li.c-menu-item
+                                a.c-menu-link(href="#") Контакты
+                    .footer__mobile-menu
+                        ul.c-mobile-menu-list
+                            li.c-mobile-menu-item.c-mobile-menu-item--dropdown
+                                button.c-mobile-menu-link.c-mobile-menu-link--toggle
+                                    span.c-mobile-menu-link-text Каталог семян
+                                    +icon("carbon_caret-down", "c-mobile-menu-link-icon")
+                                ul.c-mobile-submenu
+                                    li.c-mobile-submenu-item
+                                        a.c-mobile-submenu-link(href="#") Семена овощей
+                                    li.c-mobile-submenu-item
+                                        a.c-mobile-submenu-link(href="#") Семена цветов
+                                    li.c-mobile-submenu-item
+                                        a.c-mobile-submenu-link(href="#") Семена злаков
+                            li.c-mobile-menu-item
+                                a.c-mobile-menu-link(href="#") Пресс-центр
+                            li.c-mobile-menu-item
+                                a.c-mobile-menu-link(href="#") Контакты
+                .footer__top-right
+                    .c-contacts.footer__contacts
+                        .c-contacts__phone-wrapper
+                            a(href="tel:8 (84454) 5-46-31").c-contacts__phone
+                                +icon("carbon_phone-voice-filled", "c-contacts__phone-icon")
+                                span.c-contacts__phone-content
+                                  span.c-contacts__phone-content-text 8 (84454) 5-46-31
+                                  +icon("carbon_caret-down", "c-contacts__phone-content-icon")
+                            ul.c-contacts__phone-dropdown
+                                li.c-contacts__phone-dropdown-item
+                                    a.c-contacts__phone-dropdown-link(href="tel:+79999999999") 8 (84454) 5-46-31
+                                li.c-contacts__phone-dropdown-item
+                                    a.c-contacts__phone-dropdown-link(href="tel:+79999999998") 8 (84454) 5-46-32
+                        .c-mobile-menu-item.c-mobile-menu-item--dropdown
+                            button.c-mobile-menu-link.c-mobile-menu-link--toggle
+                                .c-contacts__phone
+                                    +icon("carbon_phone-voice-filled", "c-contacts__phone-icon")
+                                    span.c-contacts__phone-content
+                                        span.c-contacts__phone-content-text 8 (84454) 5-46-31
+                                        +icon("carbon_caret-down", "c-contacts__phone-content-icon")
+                            ul.c-mobile-submenu
+                                li.c-mobile-submenu-item
+                                    a.c-mobile-submenu-link(href="tel: 8 (84454) 5-46-31") 8 (84454) 5-46-31
+                                li.c-mobile-submenu-item
+                                    a.c-mobile-submenu-link(href="tel: 8 (84454) 5-46-32") 8 (84454) 5-46-32
+                        a(href="email:Chelkan_invest@mail.ru").c-contacts__email
+                            +icon("material-symbols-light_mail", "c-contacts__email-icon")
+                            span.c-contacts__email-text Chelkan_invest@mail.ru
+                    .footer__button-n-worktime
+                        .footer__button
+                            a(href="#", data-hystmodal="#modal-2").button.button--inversed Заказать звонок
+                        .footer__worktime
+                            span Работаем <b>с 8 - 17 ч,</b> перерыв <b>с 12 - 13 ч</b>
+    hr
+    .container.c-container
+        .row
+            .col-12.footer__bottom
+                .footer__bottom-links
+                    a(href="#").footer__bottom-link Политика конфиденциальности
+                .footer__bottom-pr-volga
+                    .footer__bottom-pr-volga-text
+                        span Создание и продвижение сайтов — 
+                    .footer__bottom-pr-volga-link
+                        a(href="#") PR-VOLGA

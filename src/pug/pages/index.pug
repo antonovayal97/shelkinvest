@@ -1,29 +1,18 @@
 extends ../layout/app
+block styles
+  link(rel="stylesheet", href="./css/blocks/main-banner.min.css")
+  link(rel="stylesheet", href="./css/blocks/advantages.min.css")
+  link(rel="stylesheet", href="./css/blocks/our-products.min.css")
+  link(rel="stylesheet", href="./css/blocks/about.min.css")
+  link(rel="stylesheet", href="./css/blocks/consult.min.css")
+block script
+  script(src="js/mainBanner.js")
 block page
   include ../chunk/header
   main
-    .main-banner.main-banner--animated
-      .main-banner__image
-        img(src="./img/background-full.webp", alt="banner")
-      .main-banner__top
-        .container.c-container
-          .row
-            .col-12.col-md-9
-              .main-banner__top-logo
-                img(src="./img/shelkainvest.svg", alt="logo")
-      .main-banner__bottom
-        .main-banner__bottom-image
-          img(src="./img/trava.webp", alt="trava")
-        .container.c-container.main-banner__bottom-content
-          .row.justify-content-between
-            .col-12.col-md-5.col-lg-4.order-2.order-lg-1
-              button.main-banner__button
-                span Получить консультацию
-                .main-banner__button-arrow
-                  +icon("button-arrow", "main-banner__button-arrow-icon")
-            .col-12.col-md-12.col-lg-6.order-1.order-lg-2
-              .main-banner__bottom-text <span class="color-accent">Растениеводческая</span> компания <br>специализирующаяся на выращивании <span class="color-accent">семян нута</span>
-        .main-banner__bottom-shadows
-          .main-banner__bottom-shadow-1
-          .main-banner__bottom-shadow-2
+    include ../blocks/main-banner
+    include ../blocks/advantages
+    include ../blocks/our-products
+    include ../blocks/about
+    include ../blocks/consult
   include ../chunk/footer

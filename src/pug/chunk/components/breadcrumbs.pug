@@ -1,0 +1,11 @@
+mixin breadcrumbs(links = ["Главная"])
+    .breadcrumbs
+        each link, index in links
+            if index < links.length - 1
+                .breadcrumbs__item
+                    a(href="#")=link
+                .breadcrumbs__dot
+                    span •
+            else
+                .breadcrumbs__item
+                    span=link

@@ -1,0 +1,5 @@
+mixin link-button(name, link)
+  a(href=link).link-button
+    span.link-button__text=name
+    .link-button__arrow
+        +icon("button-arrow", "link-button__arrow-icon")

@@ -1,0 +1,25 @@
+.main-banner
+    .main-banner__image
+        img(src="./img/background-full.webp", alt="banner")
+    .main-banner__top
+        .container.c-container
+            .row
+                .col-12.col-md-9
+                    .main-banner__top-logo
+                        img(src="./img/shelkainvest.svg", alt="logo")
+    .main-banner__bottom
+        .main-banner__bottom-image
+            img(src="./img/trava.webp", alt="trava")
+        .container.c-container.main-banner__bottom-content
+            .row.justify-content-between
+                .col-12.col-md-5.col-lg-4.order-2.order-lg-1
+                    .main-banner__button
+                        button(data-hystmodal="#modal-2").button-arrow
+                            span Получить консультацию
+                            .button-arrow__arrow
+                                +icon("button-arrow", "button-arrow_arrow-icon")
+                .col-12.col-md-12.col-lg-6.order-1.order-lg-2
+                    .main-banner__bottom-text <span class="color-accent">Растениеводческая</span> компания <br>специализирующаяся на выращивании <span class="color-accent">семян нута</span> селекции <span class="color-accent">Балашова В.В. и Балашова А.В</span>
+        .main-banner__bottom-shadows
+            .main-banner__bottom-shadow-1
+            .main-banner__bottom-shadow-2

@@ -1,0 +1,21 @@
+.consult(style="background-image: url(./img/consult.webp)")
+    .container.c-container
+        .row
+            .col-12
+                .consult__title
+                    h2 Заказать консультацию
+                .consult__form
+                    .consult__inputs
+                        input(type="text", placeholder="Ваше имя", class="c-input")
+                        input(type="phone", placeholder="Телефон", class="c-input c-phone-input")
+                        input(type="email", placeholder="Email", class="c-input")
+                    .consult__check
+                        label.c-checkbox-wrap
+                            input(type="checkbox", name="")
+                            span.c-checkbox
+                                +icon("c-check", "c-checkbox-icon")
+                        .consult__check-text
+                            span Я соглашаюсь на обработку
+                            a(href="#") персональных данных
+                    .consult__button
+                        button(type="submit").button.button--inversed.button--big Отправить

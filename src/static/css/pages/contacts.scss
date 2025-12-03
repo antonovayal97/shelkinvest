@@ -1,0 +1,142 @@
+.p-contacts {
+  padding-bottom: 51px;
+  @include max-md {
+    padding-bottom: 23px;
+  }
+  &__side {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    color: #0c2549;
+    @include max-lg {
+      gap: 14px;
+    }
+    @include max-md {
+      margin-bottom: 24px;
+    }
+    &-item {
+    }
+    &-email {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 10px;
+      &-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &-phones {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      @include max-lg {
+        gap: 10px;
+      }
+    }
+    &-phone {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      &-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &__worktime {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    &-item {
+      &-wrap {
+        display: flex;
+        gap: 5px;
+      }
+      span {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0%;
+      }
+      b {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0%;
+        white-space: nowrap;
+      }
+    }
+  }
+  &__cards {
+    @include max-xl {
+      .row {
+        gap: 24px;
+      }
+    }
+  }
+  &__card {
+    position: relative;
+    z-index: 1;
+    &-top {
+      margin-bottom: 10px;
+    }
+    &-name {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0%;
+      margin-bottom: 5px;
+    }
+    &-location {
+      display: flex;
+      gap: 5px;
+      &-icon {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+      &-text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0%;
+      }
+    }
+    &-bottom {
+    }
+    &-map {
+      height: 201px;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #c9dcb2;
+      border: 1px solid #c9dcb2;
+      .ymaps-2-1-79-map-copyrights-promo,
+      .ymaps-2-1-79-copyright {
+        display: none;
+      }
+    }
+  }
+  &__button {
+    .button-arrow {
+      box-shadow: unset;
+      @include max-sm {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+  &__leaf {
+    position: absolute;
+    top: -105px;
+    right: -126px;
+    z-index: -1;
+    @include max-xl {
+      height: 280px;
+    }
+  }
+}

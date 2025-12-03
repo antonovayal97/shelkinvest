@@ -1,0 +1,40 @@
+.our-products
+    .container.c-container
+        .row
+            .col-12
+                .our-products__triangle
+                    img(src="./img/our-products-triangle.svg", alt="")
+            .col-12
+                .our-products__title
+                    h2 Наша продукция
+            .our-products__cards
+                .row
+                    .col-12.col-md-4.our-products__card-wrap
+                        a(href="#").our-products__card
+                            .our-products__card-image
+                                img(src="./img/our-products-1.png", alt="")
+                            .our-products__card-button
+                                .our-products__card-button-title
+                                    span ВОЛЖАНИН
+                                .our-products__card-button-arrow
+                                    +icon("button-arrow", "our-products__card-button-arrow-icon")
+                    .col-12.col-md-4.our-products__card-wrap
+                        a(href="#").our-products__card
+                            .our-products__card-image
+                                img(src="./img/our-products-2.png", alt="")
+                            .our-products__card-button
+                                .our-products__card-button-title
+                                    span ВОЛЖАНИН 50
+                                .our-products__card-button-arrow
+                                    +icon("button-arrow", "our-products__card-button-arrow-icon")
+                    .col-12.col-md-4.our-products__card-wrap
+                        a(href="#").our-products__card
+                            .our-products__card-image
+                                img(src="./img/our-products-3.png", alt="")
+                            .our-products__card-button
+                                .our-products__card-button-title
+                                    span Прочие сельхоз <br>культуры и продукция
+                                .our-products__card-button-arrow
+                                    +icon("button-arrow", "our-products__card-button-arrow-icon")
+    .our-products__image
+        img(src="./img/our-products-background.png", alt="")

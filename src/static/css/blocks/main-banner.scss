@@ -1,0 +1,288 @@
+@import "../service/media-mixin.scss";
+
+.main-banner {
+  position: relative;
+  width: 100%;
+  height: 45.35vw;
+  overflow: hidden;
+  @include max-lg {
+    height: 860px;
+  }
+  @include max-md {
+    height: 636px;
+  }
+  &--animated {
+    .main-banner__image img {
+      object-position: 0 29%;
+    }
+    .main-banner__bottom-image {
+      bottom: 0;
+    }
+    .main-banner__top-logo {
+      margin-top: calc(13.8vw);
+    }
+    .main-banner__top::after {
+      opacity: 1;
+      height: 100%;
+    }
+    .main-banner__bottom-shadow-1 {
+      bottom: calc((-161 / 1920) * 100vw);
+    }
+    .main-banner__bottom-shadow-2 {
+      bottom: calc(-340 / 1920 * 100vw);
+    }
+    @include max-xxl {
+      .main-banner__top-logo {
+        margin-top: 12.8vw;
+      }
+    }
+    @include max-lg {
+      .main-banner__image img {
+        object-position: 0 29%;
+      }
+      .main-banner__bottom-image {
+        bottom: -11%;
+      }
+      .main-banner__top-logo {
+        margin-top: calc(-5vw + 320px);
+      }
+      .main-banner__top::after {
+        opacity: 1;
+        height: 100%;
+      }
+      .main-banner__bottom-shadow-1 {
+        bottom: calc((-161 / 1920) * 100vw);
+      }
+      .main-banner__bottom-shadow-2 {
+        bottom: calc(-340 / 1920 * 100vw);
+      }
+    }
+    @include max-md {
+      .main-banner__top-logo {
+        margin-top: calc(-5vw + 210px);
+      }
+    }
+    @include max-sm {
+      .main-banner__image img {
+        object-position: 0 29%;
+      }
+      .main-banner__bottom-image {
+        bottom: -12%;
+      }
+      .main-banner__top-logo {
+        margin-top: calc(-16vw + 270px);
+      }
+      .main-banner__top::after {
+        opacity: 1;
+        height: 100%;
+      }
+      .main-banner__bottom-shadow-1 {
+        bottom: calc((-161 / 1920) * 100vw);
+      }
+      .main-banner__bottom-shadow-2 {
+        bottom: calc(-340 / 1920 * 100vw);
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include max-md {
+      top: -220px;
+      left: -80px;
+      width: 180%;
+      height: 180%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 0%;
+    }
+  }
+  &__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 23.5vw;
+    z-index: 1;
+    @include max-lg {
+      height: 50%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 150%;
+      background: linear-gradient(
+        180deg,
+        rgba(55, 165, 249, 0.4) 37.22%,
+        rgba(12, 37, 73, 0.4) 94.26%
+      );
+      opacity: 0;
+      transition: all 0.5s ease;
+      transition-delay: 100ms;
+      @include max-lg {
+        height: 100%;
+      }
+    }
+    &-logo {
+      margin-top: calc(29.15vw - 50px);
+      @include max-lg {
+        margin-top: calc(48.15vh - 50px);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__bottom {
+    position: absolute;
+    bottom: 2.7vw;
+    left: 0;
+    width: 100%;
+    height: 25.9vw;
+    z-index: 1;
+    @include max-lg {
+      height: 74%;
+    }
+    @include max-md {
+      height: 77%;
+    }
+    &-image {
+      position: absolute;
+      bottom: -24%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-content {
+      position: relative;
+      z-index: 3;
+      @include max-lg {
+        position: absolute;
+        top: unset;
+        bottom: 124px;
+      }
+    }
+    &-shadows {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+    &-shadow {
+      &-1 {
+        z-index: 1;
+        position: absolute;
+        bottom: calc((-700 / 1920) * 100vw);
+        left: calc(-15 / 1920 * 100vw);
+        width: calc(1958 / 1920 * 100vw);
+        height: calc(514.8 / 1920 * 100vw);
+        transform: rotateZ(-4.32deg);
+        background: rgba(0, 8, 66, 0.32);
+        /* Добавьте вендорные префиксы */
+        filter: blur(63.3px);
+      }
+      &-2 {
+        z-index: 2;
+        position: absolute;
+        bottom: calc(-700 / 1920 * 100vw);
+        right: calc(-90 / 1920 * 100vw);
+        width: calc(1075 / 1920 * 100vw);
+        height: calc(514.8 / 1920 * 100vw);
+        transform: rotateZ(-18.01deg);
+        background: rgba(0, 1, 16, 0.32);
+        filter: blur(115.5px);
+      }
+    }
+    &-text {
+      position: relative;
+      justify-self: flex-end;
+      max-width: 711px;
+      margin-top: 132px;
+      border-radius: 20px;
+      padding: 24px 37.5px;
+      color: #fff;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 120%;
+      background: linear-gradient(
+        174.68deg,
+        rgba(0, 0, 0, 0.06) 22.7%,
+        rgba(0, 0, 0, 0) 159%
+      );
+
+      filter: drop-shadow(0px -1px 18.1px rgba(0, 0, 0, 0.25));
+
+      backdrop-filter: blur(16.3px);
+      -webkit-backdrop-filter: blur(16.3px);
+      @include max-lg {
+        margin-top: 0;
+        justify-self: flex-start;
+        font-size: 18px;
+      }
+      @include max-md {
+        width: calc(100% + var(--bs-gutter-x));
+        margin-right: calc(var(--bs-gutter-x) * -0.5);
+        margin-left: calc(var(--bs-gutter-x) * -0.5);
+        padding: 24px;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0%;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid transparent;
+        border-radius: 22px;
+        opacity: 0.5;
+        background: linear-gradient(
+            158deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%
+          )
+          border-box;
+        mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: xor;
+        pointer-events: none;
+      }
+    }
+  }
+  &__button {
+    margin-top: 159px;
+    position: relative;
+    @include max-lg {
+      margin-top: 32px;
+    }
+    @include max-md {
+      .button-arrow {
+        justify-self: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+      }
+      margin-top: -10px;
+      z-index: 1;
+    }
+  }
+}

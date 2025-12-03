@@ -1,0 +1,82 @@
+extends ../layout/app
+block styles
+    link(rel="stylesheet", href="./css/blocks/consult.min.css")
+block script
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=f52a5ff7-c6d3-42f8-b08d-92e4954d6a75&lang=ru_RU")
+    script(src="js/contacts.js")
+block page
+    include ../chunk/header
+    main.page
+        .container.c-container
+            .row
+                .col-12
+                    +breadcrumbs(["Главная","Контакты"])
+                .col-12
+                    .page__title
+                        h1 Контакты
+        .p-contacts
+            .container.c-container
+                .row
+                    .col-12.col-md-5.col-lg-4.col-xl-3
+                        .p-contacts__side
+                            .p-contacts__side-item
+                                .p-contacts__side-email
+                                    .p-contacts__side-email
+                                        +icon("material-symbols-light_mail", "p-contacts__side-email-icon")
+                                        a(href="mailto: Chelkan_invest@mail.ru") Chelkan_invest@mail.ru
+                                .p-contacts__side-phones
+                                    .p-contacts__side-phone
+                                        +icon("carbon_phone-voice-filled", "p-contacts__side-phone-icon")
+                                        a(href="tel: 8 (84454) 5-46-31") 8 (84454) 5-46-31 
+                                    .p-contacts__side-phone
+                                        +icon("carbon_phone-voice-filled", "p-contacts__side-phone-icon")
+                                        a(href="tel: 8 (927) 506-03-14") 8 (927) 506-03-14
+                                    .p-contacts__side-phone
+                                        +icon("carbon_phone-voice-filled", "p-contacts__side-phone-icon")
+                                        a(href="tel: 8 (903) 468-89-49") 8 (903) 468-89-49
+                            .p-contacts__side-item
+                                .p-contacts__worktime
+                                    .p-contacts__worktime-item-wrap
+                                        .p-contacts__worktime-item
+                                            span Работаем
+                                        .p-contacts__worktime-item
+                                            b с 8 - 17 ч,
+                                    .p-contacts__worktime-item-wrap
+                                        .p-contacts__worktime-item
+                                            span перерыв
+                                        .p-contacts__worktime-item
+                                            b  с 12 - 13 ч
+                            .p-contacts__side-item
+                                .p-contacts__button
+                                    button(data-hystmodal="#modal-2").button-arrow
+                                        span Заказать звонок
+                                        .button-arrow__arrow
+                                            +icon("button-arrow", "button-arrow_arrow-icon")
+                    .p-contacts__cards.col-12.col-md-6.col-xl-8
+                        .row
+                            .col-12.col-xl-6
+                                div(style="z-index: 2").p-contacts__card
+                                    .p-contacts__card-top
+                                        .p-contacts__card-name
+                                            span Юридический адрес
+                                        .p-contacts__card-location
+                                            +icon("location", "p-contacts__card-location-icon")
+                                            .p-contacts__card-location-text
+                                                span 403766, Волгоградская область, Жирновский район, с. Тарапатино ул. Садовая, д.17
+                                    .p-contacts__card-bottom
+                                        div(id="map-1").p-contacts__card-map
+                            .col-12.col-xl-6
+                                .p-contacts__card
+                                    .p-contacts__card-top
+                                        .p-contacts__card-name
+                                            span Адрес производственной базы
+                                        .p-contacts__card-location
+                                            +icon("location", "p-contacts__card-location-icon")
+                                            .p-contacts__card-location-text
+                                                span Волгоградская область, Жирновский район, с. Андреевка, территория Промбазы
+                                    .p-contacts__card-bottom
+                                        div(id="map-2").p-contacts__card-map
+                                    .p-contacts__leaf
+                                        img(src="./img/leaf-bg.svg", alt="")
+        include ../blocks/consult
+    include ../chunk/footer

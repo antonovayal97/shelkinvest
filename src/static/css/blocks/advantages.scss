@@ -1,0 +1,228 @@
+@import "../service/media-mixin.scss";
+
+.advantages {
+  background-color: #fbfefb;
+  padding-top: 68px;
+  min-height: 890px;
+  overflow: hidden;
+  @include max-lg {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    min-height: auto;
+  }
+  &__title {
+    text-align: center;
+    h2 {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 36px;
+      @include max-lg {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+    b {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 36px;
+      color: #4d9215;
+      @include max-lg {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+  &__cards {
+    position: relative;
+    &-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 120px;
+      grid-column-gap: 60px;
+      padding-top: 90px;
+      @include max-lg {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        padding-top: 24px;
+      }
+      @include max-sm {
+        grid-template-columns: 1fr;
+        grid-row-gap: 31px;
+      }
+    }
+    &-natures {
+      position: absolute;
+      height: 100%;
+      top: 5px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    &-tree {
+      @include max-lg {
+        display: none;
+      }
+    }
+    &-leafs {
+      position: absolute;
+      top: 100px;
+      left: 54%;
+      transform: translate(-50%, 0);
+      display: flex;
+      gap: 720px;
+      @include max-lg {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: row-reverse;
+        gap: 0;
+      }
+    }
+    &-leaf {
+      width: 469px;
+      &--left {
+        @include max-lg {
+          transform: translateX(20vw) translateY(-35%);
+        }
+        @include max-sm {
+          transform: translateX(0) translateY(-70%);
+        }
+      }
+      &--right {
+        transform: scaleX(-1);
+        @include max-lg {
+          transform: translateX(-20vw) scaleX(-1) translateY(35%);
+        }
+        @include max-sm {
+          transform: translateX(0) scaleX(-1) translateY(70%);
+        }
+      }
+    }
+  }
+  &__card {
+    display: flex;
+    gap: 26px;
+
+    &--1 {
+      .advantages__card-content {
+        margin-top: 6.5px;
+      }
+    }
+
+    &--2 {
+      .advantages__card-image {
+        margin-top: 7px;
+      }
+    }
+
+    &--3 {
+      margin-top: -25px;
+      .advantages__card-content {
+        margin-top: -3px;
+      }
+    }
+
+    &--4 {
+      margin-top: -22px;
+      .advantages__card-content {
+        margin-top: -4px;
+      }
+    }
+
+    &--5 {
+      margin-top: 10px;
+      .advantages__card-content {
+        margin-top: -36px;
+        margin-right: 6px;
+      }
+    }
+
+    &--6 {
+      margin-top: 9px;
+      .advantages__card-content {
+        margin-top: -35px;
+      }
+    }
+
+    @include max-lg {
+      flex-direction: row-reverse;
+      gap: 10px;
+      margin-top: 0 !important;
+    }
+    @include max-sm {
+      gap: 25px;
+    }
+    &:nth-child(2n + 1) {
+      justify-content: flex-end;
+      @include max-sm {
+        flex-direction: row;
+      }
+    }
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      .advantages__card-name h3 {
+        text-align: left;
+      }
+      .advantages__card-text p {
+        text-align: left;
+      }
+    }
+
+    &-content {
+      width: 300px;
+      @include max-lg {
+        width: 100%;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+    &-name {
+      margin-bottom: 14px;
+      h3 {
+        color: #336667;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0%;
+        text-align: right;
+        text-transform: uppercase;
+        @include max-lg {
+          text-align: left;
+          font-size: 16px;
+          line-height: 16px;
+        }
+        @include max-sm {
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+    }
+    &-text {
+      p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: right;
+        @include max-lg {
+          text-align: left;
+        }
+        @include max-sm {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+    &-image {
+      flex-shrink: 0;
+      @include max-lg {
+        width: 40px;
+      }
+      @include max-sm {
+        width: 60px;
+      }
+    }
+  }
+}

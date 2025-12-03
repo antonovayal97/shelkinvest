@@ -3,79 +3,89 @@ header.header
         .row
             .col-12.header__inner
                 button.header__burger
-                    +icon("burger-menu", "header__burger-icon")
-                a(href="#").header__logo
-                    .header__logo-image
+                    +icon("burger-menu-", "header__burger-icon")
+                    +icon("close-menu", "header__burger-close-icon")
+                a(href="/").logo.header__logo
+                    .logo__image
                         img(src="./img/header-logo.svg", alt="logo")
-                    .header__logo-text
-                        span.header__logo-text-title ООО «Щелканинвест»
-                        span.header__logo-text-description Растениеводческая компания 
-                .header__menu
-                    ul.header__menu-list
-                        li.header__menu-item.header__menu-item--dropdown
-                            a.header__menu-link(href="#")
-                                span.header__menu-link-text Каталог семян
-                                +icon("carbon_caret-down", "header__menu-link-icon")
-                            ul.header__submenu
-                                li.header__submenu-item
-                                    a.header__submenu-link(href="#") Семена овощей
-                                li.header__submenu-item
-                                    a.header__submenu-link(href="#") Семена цветов
-                                li.header__submenu-item
-                                    a.header__submenu-link(href="#") Семена злаков
-                        li.header__menu-item
-                            a.header__menu-link(href="#") Пресс-центр
-                        li.header__menu-item
-                            a.header__menu-link(href="#") Контакты
+                    .logo__text
+                        span.logo__text-title ООО «Щелканинвест»
+                        span.logo__text-description Растениеводческая компания 
+                .c-menu
+                    ul.c-menu-list
+                        li.c-menu-item.c-menu-item--dropdown
+                            a.c-menu-link(href="#")
+                                span.c-menu-link-text Каталог семян 
+                                +icon("carbon_caret-down", "c-menu-link-icon")
+                            ul.c-submenu
+                                li.c-submenu-item
+                                    a.c-submenu-link(href="#") Семена овощей
+                                li.c-submenu-item
+                                    a.c-submenu-link(href="#") Семена цветов
+                                li.c-submenu-item
+                                    a.c-submenu-link(href="#") Семена злаков
+                        li.c-menu-item
+                            a.c-menu-link(href="#") Пресс-центр
+                        li.c-menu-item
+                            a.c-menu-link(href="#") Контакты
                 .header__info
-                    .header__contacts
-                        a(href="email:Chelkan_invest@mail.ru").header__contacts-email
-                            +icon("material-symbols-light_mail", "header__contacts-email-icon")
-                            span.header__contacts-email-text Chelkan_invest@mail.ru
-                        .header__contacts-phone-wrapper
-                            a(href="tel:8 (84454) 5-46-31").header__contacts-phone
-                                +icon("carbon_phone-voice-filled", "header__contacts-phone-icon")
-                                span.header__contacts-phone-content
-                                  span.header__contacts-phone-content-text 8 (84454) 5-46-31
-                                  +icon("carbon_caret-down", "header__contacts-phone-content-icon")
-                            ul.header__contacts-phone-dropdown
-                                li.header__contacts-phone-dropdown-item
-                                    a.header__contacts-phone-dropdown-link(href="tel:+79999999999") 8 (84454) 5-46-31
-                                li.header__contacts-phone-dropdown-item
-                                    a.header__contacts-phone-dropdown-link(href="tel:+79999999998") 8 (84454) 5-46-32
-                                li.header__contacts-phone-dropdown-item
-                                    a.header__contacts-phone-dropdown-link(href="tel:+79999999997") 8 (84454) 5-46-33 
+                    .c-contacts
+                        a(href="email:Chelkan_invest@mail.ru").c-contacts__email
+                            +icon("material-symbols-light_mail", "c-contacts__email-icon")
+                            span.c-contacts__email-text Chelkan_invest@mail.ru
+                        .c-contacts__phone-wrapper
+                            a(href="tel:8 (84454) 5-46-31").c-contacts__phone
+                                +icon("carbon_phone-voice-filled", "c-contacts__phone-icon")
+                                span.c-contacts__phone-content
+                                  span.c-contacts__phone-content-text 8 (84454) 5-46-31
+                                  +icon("carbon_caret-down", "c-contacts__phone-content-icon")
+                            ul.c-contacts__phone-dropdown
+                                li.c-contacts__phone-dropdown-item
+                                    a.c-contacts__phone-dropdown-link(href="tel:+79999999999") 8 (84454) 5-46-31
+                                li.c-contacts__phone-dropdown-item
+                                    a.c-contacts__phone-dropdown-link(href="tel:+79999999998") 8 (84454) 5-46-32
+                                li.c-contacts__phone-dropdown-item
+                                    a.c-contacts__phone-dropdown-link(href="tel:+79999999997") 8 (84454) 5-46-33 
                     .header__work-time Работаем с 8 - 17 ч, <br>перерыв с 12 - 13 ч
                 .header__button
-                    a(href="#").header__button-mobile
+                    a(href="#", data-hystmodal="#modal-2").header__button-mobile
                         +icon("carbon_phone-voice-filled", "header__button-mobile-icon")
-                    a(href="#").button Заказать звонок
+                    a(href="#", data-hystmodal="#modal-2").button Заказать звонок
     .header__mobile-overlay
+        .header__mobile-overlay-blur
     .header__mobile-menu
         .header__mobile-menu-content
-            ul.header__mobile-menu-list
-                li.header__mobile-menu-item.header__mobile-menu-item--dropdown
-                    button.header__mobile-menu-link.header__mobile-menu-link--toggle
-                        span.header__mobile-menu-link-text Каталог семян
-                        +icon("carbon_caret-down", "header__mobile-menu-link-icon")
-                    ul.header__mobile-submenu
-                        li.header__mobile-submenu-item
-                            a.header__mobile-submenu-link(href="#") Семена овощей
-                        li.header__mobile-submenu-item
-                            a.header__mobile-submenu-link(href="#") Семена цветов
-                        li.header__mobile-submenu-item
-                            a.header__mobile-submenu-link(href="#") Семена злаков
-                li.header__mobile-menu-item
-                    a.header__mobile-menu-link(href="#") Пресс-центр
-                li.header__mobile-menu-item
-                    a.header__mobile-menu-link(href="#") Контакты
             .header__mobile-contacts
                 a(href="email:Chelkan_invest@mail.ru").header__mobile-contacts-email
                     +icon("material-symbols-light_mail", "header__mobile-contacts-email-icon")
                     span.header__mobile-contacts-email-text Chelkan_invest@mail.ru
-                .header__mobile-contacts-phone-wrapper
-                    a(href="tel:8 (84454) 5-46-31").header__mobile-contacts-phone
-                        +icon("carbon_phone-voice-filled", "header__mobile-contacts-phone-icon")
-                        span.header__mobile-contacts-phone-text 8 (84454) 5-46-31
-                .header__mobile-work-time Работаем с 8 - 17 ч, перерыв с 12 - 13 ч
-            a(href="#").header__mobile-button.button Заказать звонок
+                .c-mobile-menu-item.c-mobile-menu-item--dropdown
+                    button.c-mobile-menu-link.c-mobile-menu-link--toggle
+                        .c-contacts__phone
+                            +icon("carbon_phone-voice-filled", "c-contacts__phone-icon")
+                            span.c-contacts__phone-content
+                                span.c-contacts__phone-content-text 8 (84454) 5-46-31
+                                +icon("carbon_caret-down", "c-contacts__phone-content-icon")
+                    ul.c-mobile-submenu
+                        li.c-mobile-submenu-item
+                            a.c-mobile-submenu-link(href="tel: 8 (84454) 5-46-31") 8 (84454) 5-46-31
+                        li.c-mobile-submenu-item
+                            a.c-mobile-submenu-link(href="tel: 8 (84454) 5-46-32") 8 (84454) 5-46-32
+            ul.c-mobile-menu-list
+                li.c-mobile-menu-item.c-mobile-menu-item--dropdown
+                    button.c-mobile-menu-link.c-mobile-menu-link--toggle
+                        span.c-mobile-menu-link-text Каталог семян
+                        +icon("carbon_caret-down", "c-mobile-menu-link-icon")
+                    ul.c-mobile-submenu
+                        li.c-mobile-submenu-item
+                            a.c-mobile-submenu-link(href="#") Семена овощей
+                        li.c-mobile-submenu-item
+                            a.c-mobile-submenu-link(href="#") Семена цветов
+                        li.c-mobile-submenu-item
+                            a.c-mobile-submenu-link(href="#") Семена злаков
+                li.c-mobile-menu-item
+                    a.c-mobile-menu-link(href="#") Пресс-центр
+                li.c-mobile-menu-item
+                    a.c-mobile-menu-link(href="#") Контакты
+            a(href="#", data-hystmodal="#modal-2").header__mobile-button.button Заказать звонок
+            .header__mobile-work-time Работаем с 8 - 17 ч, перерыв с 12 - 13 ч
