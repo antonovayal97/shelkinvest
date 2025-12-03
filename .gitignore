@@ -1,8 +1,13 @@
 # Node.js modules
 node_modules/
 
-# Build directory
-build/
-
 # macOS system files
 **/.DS_Store
+
+
+# Игнорируем содержимое build, чтобы родитель не трогал внутренний git
+/build/.git
+/build/*
+
+# Разрешаем трекать подмодули, если нужно, тогда оставьте только .gitignore внутри build
+!build/.gitignore
