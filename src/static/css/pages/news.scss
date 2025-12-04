@@ -92,6 +92,9 @@
         }
         .p-news__card-info {
           background-color: #d1f349;
+          @include max-md {
+            background-color: #fff;
+          }
         }
       }
     }
