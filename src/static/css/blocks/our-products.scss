@@ -38,6 +38,9 @@
         .our-products__card-button {
           text-align: left;
           background-color: #d1f349;
+          @include max-md {
+            background-color: #fff;
+          }
         }
         .our-products__card-button-arrow {
           display: block;
