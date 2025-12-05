@@ -3,93 +3,94 @@ block title
   | Новости
 block page
     include ../chunk/header
-    main(style="background-image: url('./img/about-background.webp')").page.page--with-bg
-        .container.c-container
-            .row
-                .col-12
-                    +breadcrumbs(["Главная","Новости"])
-                .col-12
-                    .page__title
-                        h1 Пресс-центр
-        .p-news
+    main
+        div(style="background-image: url('./img/about-background.webp')").page.page--with-bg
             .container.c-container
                 .row
                     .col-12
-                        .p-news__filter
-                            .p-news__filter-list
-                                button.p-news__filter-item Название тега новости
-                                button.p-news__filter-item Люди
-                                button.p-news__filter-item Жизнь компании
-                                button.p-news__filter-item Интервью
-                            button.p-news__filter-clear
-                                +icon("filter-clear", "p-news__filter-clear-icon")
-                                .p-news__filter-clear-name Очистить фильтр
+                        +breadcrumbs(["Главная","Новости"])
                     .col-12
-                        .p-news__grid
-                            each item in [1,2,3,4,5]
-                                .p-news__card-wrap
-                                    a(href="./news-detail.html").p-news__card
-                                        .p-news__card-image
-                                            img(src="./img/news-card-1.png", alt="")
-                                        .p-news__card-info
-                                            .p-news__card-top
-                                                .p-news__card-date
-                                                    span 20 октября
-                                                .p-news__card-dot
-                                                    span •
-                                                .p-news__card-tags
-                                                    .p-news__card-tag
-                                                        span Интервью
-                                            .p-news__card-name
-                                                span заголовок новости в одну или в две строки
-                                .p-news__card-wrap
-                                    a(href="./news-detail.html").p-news__card
-                                        .p-news__card-image
-                                            img(src="./img/news-card-2.png", alt="")
-                                        .p-news__card-info
-                                            .p-news__card-top
-                                                .p-news__card-date
-                                                    span 28 ноября
-                                                .p-news__card-dot
-                                                    span •
-                                                .p-news__card-tags
-                                                    .p-news__card-tag
-                                                        span Название тега новости
-                                            .p-news__card-name
-                                                span заголовок новости в одну или в две строки
-                                .p-news__card-wrap
-                                    a(href="./news-detail.html").p-news__card
-                                        .p-news__card-image
-                                            img(src="./img/news-card-3.png", alt="")
-                                        .p-news__card-info
-                                            .p-news__card-top
-                                                .p-news__card-date
-                                                    span 28 ноября
-                                                .p-news__card-dot
-                                                    span •
-                                                .p-news__card-tags
-                                                    .p-news__card-tag
-                                                        span Название тега новости
-                                            .p-news__card-name
-                                                span заголовок новости в одну
-                    .col-12
-                        .c-pagination
-                            .c-pagination__more
-                                button.button Показать ещё
-                            .c-pagination__links
-                                a(href="#").c-pagination__arrow.c-pagination__arrow--prev
-                                    +icon("pagination-arrow", "c-pagination__arrow-icon")
-                                .c-pagination__list
-                                    a(href="#").c-pagination__item
-                                        span 1
-                                    .c-pagination__item.c-pagination__item--current
-                                        span 2
-                                    a(href="#").c-pagination__item
-                                        span 3
-                                    a(href="#").c-pagination__item
-                                        span ...
-                                    a(href="#").c-pagination__item
-                                        span 10
-                                a(href="#").c-pagination__arrow.c-pagination__arrow--next
-                                    +icon("pagination-arrow", "c-pagination__arrow-icon")
+                        .page__title
+                            h1 Пресс-центр
+            .p-news
+                .container.c-container
+                    .row
+                        .col-12
+                            .p-news__filter
+                                .p-news__filter-list
+                                    button.p-news__filter-item Название тега новости
+                                    button.p-news__filter-item Люди
+                                    button.p-news__filter-item Жизнь компании
+                                    button.p-news__filter-item Интервью
+                                button.p-news__filter-clear
+                                    +icon("filter-clear", "p-news__filter-clear-icon")
+                                    .p-news__filter-clear-name Очистить фильтр
+                        .col-12
+                            .p-news__grid
+                                each item in [1,2,3,4,5]
+                                    .p-news__card-wrap
+                                        a(href="./news-detail.html").p-news__card
+                                            .p-news__card-image
+                                                img(src="./img/news-card-1.png", alt="")
+                                            .p-news__card-info
+                                                .p-news__card-top
+                                                    .p-news__card-date
+                                                        span 20 октября
+                                                    .p-news__card-dot
+                                                        span •
+                                                    .p-news__card-tags
+                                                        .p-news__card-tag
+                                                            span Интервью
+                                                .p-news__card-name
+                                                    span заголовок новости в одну или в две строки
+                                    .p-news__card-wrap
+                                        a(href="./news-detail.html").p-news__card
+                                            .p-news__card-image
+                                                img(src="./img/news-card-2.png", alt="")
+                                            .p-news__card-info
+                                                .p-news__card-top
+                                                    .p-news__card-date
+                                                        span 28 ноября
+                                                    .p-news__card-dot
+                                                        span •
+                                                    .p-news__card-tags
+                                                        .p-news__card-tag
+                                                            span Название тега новости
+                                                .p-news__card-name
+                                                    span заголовок новости в одну или в две строки
+                                    .p-news__card-wrap
+                                        a(href="./news-detail.html").p-news__card
+                                            .p-news__card-image
+                                                img(src="./img/news-card-3.png", alt="")
+                                            .p-news__card-info
+                                                .p-news__card-top
+                                                    .p-news__card-date
+                                                        span 28 ноября
+                                                    .p-news__card-dot
+                                                        span •
+                                                    .p-news__card-tags
+                                                        .p-news__card-tag
+                                                            span Название тега новости
+                                                .p-news__card-name
+                                                    span заголовок новости в одну
+                        .col-12
+                            .c-pagination
+                                .c-pagination__more
+                                    button.button Показать ещё
+                                .c-pagination__links
+                                    a(href="#").c-pagination__arrow.c-pagination__arrow--prev
+                                        +icon("pagination-arrow", "c-pagination__arrow-icon")
+                                    .c-pagination__list
+                                        a(href="#").c-pagination__item
+                                            span 1
+                                        .c-pagination__item.c-pagination__item--current
+                                            span 2
+                                        a(href="#").c-pagination__item
+                                            span 3
+                                        a(href="#").c-pagination__item
+                                            span ...
+                                        a(href="#").c-pagination__item
+                                            span 10
+                                    a(href="#").c-pagination__arrow.c-pagination__arrow--next
+                                        +icon("pagination-arrow", "c-pagination__arrow-icon")
     include ../chunk/footer
