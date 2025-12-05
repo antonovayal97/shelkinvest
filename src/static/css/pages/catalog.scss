@@ -9,7 +9,10 @@
     }
   }
   .our-products__cards {
-    padding-top: 0;
+    padding-top: 40px;
     padding-bottom: 58px;
+    @include max-md {
+      padding: 0;
+    }
   }
 }
