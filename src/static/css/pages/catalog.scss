@@ -1,5 +1,4 @@
 .p-catalog {
-  padding-bottom: 58px;
   &__description {
     margin-bottom: 20px;
     p {
@@ -11,6 +10,6 @@
   }
   .our-products__cards {
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 58px;
   }
 }
