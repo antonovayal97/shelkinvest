@@ -84,6 +84,9 @@
       min-height: 90px;
       overflow: hidden;
       border-top: 1px solid #00000040;
+      @include max-md {
+        min-height: auto;
+      }
       &-title {
         opacity: 1;
         transform: translateX(0);

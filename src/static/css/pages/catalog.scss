@@ -1,0 +1,16 @@
+.p-catalog {
+  padding-bottom: 58px;
+  &__description {
+    margin-bottom: 20px;
+    p {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0%;
+    }
+  }
+  .our-products__cards {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

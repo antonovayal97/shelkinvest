@@ -34,6 +34,7 @@
   }
   &--with-bg {
     position: relative;
+
     & > * {
       z-index: 2;
       position: relative;
@@ -47,6 +48,11 @@
       height: 100%;
       background-color: #ffffffcc;
       z-index: 1;
+    }
+    &--03 {
+      &::before {
+        background-color: #ffffff4f;
+      }
     }
   }
   &__title {
@@ -907,3 +913,4 @@
 @import "./pages/contacts.scss";
 @import "./pages/news.scss";
 @import "./pages/news-detail.scss";
+@import "./pages/catalog.scss";
