@@ -695,6 +695,78 @@
   }
 }
 
+.c-form {
+  position: relative;
+  &__required {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    color: #000;
+    margin-top: 18px;
+  }
+  &__block {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid rgba(134, 155, 71, 0.3);
+    @include max-md {
+      padding: 30px 16px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 19px;
+  }
+  &__form {
+    max-width: 375px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .c-input {
+      border: 1px solid #869b474d;
+    }
+    .c-checkbox {
+      margin-top: 4px;
+    }
+    .c-check-confirm {
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 0;
+    }
+    .c-check-confirm-text {
+      flex-direction: column;
+      gap: 0;
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0%;
+      }
+      color: #0c2549;
+      a {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0%;
+        color: #0c2549;
+      }
+    }
+  }
+  &__button {
+    .button {
+      width: 100%;
+      padding: 18px 24px 20px 24px;
+    }
+  }
+}
+
 .c-check-confirm {
   display: flex;
   align-items: center;
@@ -916,3 +988,4 @@
 @import "./pages/news-detail.scss";
 @import "./pages/catalog.scss";
 @import "./pages/catalog-detail-1.scss";
+@import "./pages/catalog-detail.scss";
