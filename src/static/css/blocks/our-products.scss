@@ -15,6 +15,9 @@
   &__cards {
     padding-top: 75px;
     padding-bottom: 64px;
+    .row {
+      row-gap: calc(1 * var(--bs-gutter-x));
+    }
     @include max-md {
       padding-top: 41px;
       padding-bottom: 56px;
