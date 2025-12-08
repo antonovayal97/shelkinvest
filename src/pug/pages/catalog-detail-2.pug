@@ -1,0 +1,62 @@
+extends ../layout/app
+block title
+  | Детальная страница каталога
+block styles
+  link(rel="stylesheet", href="./css/blocks/our-products.min.css")
+  link(rel="stylesheet", href="./css/blocks/consult.min.css")
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css")
+block script
+  script(src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js")
+  script(src="./js/catalog-slider.js")
+  script(src="./js/catalog-detail-tabs.js")
+block page
+    include ../chunk/header
+    main
+        .page
+            .container.c-container
+                .row
+                    .col-12
+                        +breadcrumbs(["Главная","Каталог","Прочие сельхоз культуры и продукция"])
+                    .col-12
+                        .page__title
+                            h1 Прочие сельхоз культуры и продукция
+            .p-catalog-detail-2
+                .container.c-container
+                    .row
+                        .col-12
+                            .p-catalog-detail-2__tabs
+                                button.p-catalog-detail-2__tab Озимая пшеница
+                                button.p-catalog-detail-2__tab Ячмень
+                                button.p-catalog-detail-2__tab Подсолнечник
+                                button.p-catalog-detail-2__tab Кукуруза
+                                button.p-catalog-detail-2__tab Сорго
+                                button.p-catalog-detail-2__tab Подсолнечное масло
+                        .col-12
+                            .p-catalog-detail-2__tabs-contents
+                                each item in [1,2,3,4,5,6]
+                                    .p-catalog-detail-2__tabs-content
+                                        .swiper.catalog-detail__slider
+                                            .swiper-wrapper
+                                                .swiper-slide
+                                                    img(src="./img/p-catalog-detail-image.png", alt="")
+                                                .swiper-slide
+                                                    img(src="./img/p-catalog-detail-image.png", alt="")
+                                                .swiper-slide
+                                                    img(src="./img/p-catalog-detail-image.png", alt="")
+                                            .catalog-detail__slider-controls
+                                                .catalog-detail__slider-arrows
+                                                    .catalog-detail__slider-arrow.catalog-detail__slider-arrow--prev
+                                                        +icon("button-arrow", "catalog-detail__slider-arrow-icon")
+                                                    .catalog-detail__slider-arrow.catalog-detail__slider-arrow--next
+                                                        +icon("button-arrow", "catalog-detail__slider-arrow-icon")
+                                                .catalog-detail__slider-pagination
+                                                    .swiper-pagination
+                                        .p-catalog-detail-2__card
+                                            .p-catalog-detail-2__card-title
+                                                h2 Озимая пшеница
+                                            .p-catalog-detail-2__card-description
+                                                p Сорт злаковой культуры, которую сеют осенью, чтобы она перезимовала под снегом, а затем продолжила рост ранней весной и дала урожай летом. Урожайность обычно более высокая по сравнению с яровой пшеницей, так как она максимально использует осенние и весенние осадки.
+                                            .p-catalog-detail-2__card-button
+                                                button(type="submit").button Оставить заявку
+        include ../blocks/consult
+    include ../chunk/footer

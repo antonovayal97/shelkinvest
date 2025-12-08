@@ -1,0 +1,122 @@
+.p-catalog-detail-2 {
+  padding-bottom: 42px;
+  @include max-lg {
+    padding-bottom: 20px;
+  }
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    &-contents {
+      margin-top: 10px;
+      height: 490px;
+      @include max-lg {
+        margin-top: 20px;
+        height: auto;
+      }
+    }
+    &-content {
+      position: relative;
+      opacity: 0;
+      display: none;
+      &--active {
+        opacity: 1;
+        display: block;
+      }
+      @include max-lg {
+        padding: 16px;
+        border: 1px solid #869b474d;
+        border-radius: 20px;
+        margin: 0 -16px;
+      }
+      .catalog-detail__slider-arrows {
+        padding-left: 0;
+      }
+      .catalog-detail__slider-controls {
+        justify-content: flex-start;
+        gap: 13px;
+        @include max-lg {
+          justify-content: center;
+        }
+      }
+      .catalog-detail__slider .swiper-slide {
+        @include max-lg {
+          height: 220px;
+        }
+      }
+    }
+    @include max-md {
+      gap: 10px;
+    }
+  }
+  &__tab {
+    padding: 6px 20px 8px 20px;
+    background-color: unset;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    color: #000000;
+    border: 1px solid#86B627;
+    border-radius: 100px;
+    &--active {
+      background-color: rgba(209, 243, 73, 0.25);
+    }
+    &:hover {
+      color: #4d9215;
+    }
+    @include max-md {
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0%;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 2;
+    width: 368px;
+    height: 428px;
+    top: 10px;
+    right: 10px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 15px -8px rgba(82, 86, 54, 0.35);
+    background-color: #fff;
+    color: #0c2549;
+    @include max-lg {
+      position: static;
+      box-shadow: unset;
+      width: 100%;
+      height: auto;
+      gap: 16px;
+      padding: 0;
+    }
+    &-title {
+      h2 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        @include max-lg {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
+    &-description {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0%;
+    }
+    &-button {
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}

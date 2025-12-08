@@ -73,6 +73,7 @@
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   gap: 9px;
   margin-bottom: 10px;
   &__item {
@@ -988,4 +989,5 @@
 @import "./pages/news-detail.scss";
 @import "./pages/catalog.scss";
 @import "./pages/catalog-detail-1.scss";
+@import "./pages/catalog-detail-2.scss";
 @import "./pages/catalog-detail.scss";
