@@ -8,6 +8,10 @@
 @import "./service/media-mixin.scss";
 @import "./service/reset.scss";
 
+main {
+  min-height: 100vh;
+}
+
 .icon {
   width: 24px;
   height: 24px;
