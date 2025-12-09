@@ -22,6 +22,9 @@
   &__date {
   }
   &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   &__tag {
     color: #4d9215;
