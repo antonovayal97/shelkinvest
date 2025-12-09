@@ -142,6 +142,8 @@
     }
     &-tags {
       color: #4d9215;
+      display: flex;
+      gap: 6px;
     }
     &-name {
       font-weight: 500;
