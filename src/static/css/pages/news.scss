@@ -137,12 +137,14 @@
       }
     }
     &-date {
+      flex-shrink: 0;
     }
     &-dot {
     }
     &-tags {
       color: #4d9215;
       display: flex;
+      flex-wrap: wrap;
       gap: 6px;
     }
     &-name {
