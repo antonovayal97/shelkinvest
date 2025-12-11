@@ -1,3 +1,5 @@
+@import "../service/media-mixin.scss";
+
 .p-catalog-detail-1 {
   padding-top: 18px;
   @include max-lg {

@@ -1,3 +1,5 @@
+@import "../service/media-mixin.scss";
+
 .p-catalog-detail-2 {
   padding-bottom: 42px;
   @include max-lg {

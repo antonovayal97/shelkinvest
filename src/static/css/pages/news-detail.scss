@@ -1,3 +1,5 @@
+@import "../service/media-mixin.scss";
+
 .p-news-detail {
   padding-bottom: 35px;
   @include max-lg {
