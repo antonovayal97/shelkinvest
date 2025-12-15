@@ -252,4 +252,29 @@
       }
     }
   }
+  .container {
+    position: relative;
+  }
+  &__up-button {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: calc(-30vw);
+    padding: 13px;
+    border-radius: 100px;
+    background-color: #000000;
+    border: none;
+    color: #d1f349;
+    line-height: 0;
+    transition: all 0.3s ease;
+    @include max-md {
+      display: none;
+    }
+    &--active {
+      right: calc(3vw);
+    }
+    .icon {
+      transform: rotateZ(-90deg);
+    }
+  }
 }

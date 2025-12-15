@@ -1,6 +1,8 @@
 extends ../layout/app
 block title
   | Детальная страница новостей
+block styles
+    link(rel="stylesheet", href="./css/pages/news-detail.min.css")
 block page
     include ../chunk/header
     main
@@ -78,4 +80,6 @@ block page
                                         span Поделиться
                             .p-news-detail__back-button-wrap
                                 a(href="./news.html").button К новостям
+                button.p-news-detail__up-button
+                    +icon("button-arrow")
     include ../chunk/footer
