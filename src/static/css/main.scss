@@ -85,6 +85,9 @@ main {
     font-size: 14px;
     line-height: 22px;
     letter-spacing: 0%;
+    &:hover {
+      color: #4d9215;
+    }
     span {
       color: #abc73e;
     }
@@ -122,6 +125,9 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
+      &:hover {
+        color: #4d9215;
+      }
       @include max-xxl {
         width: 130px;
       }
@@ -268,6 +274,11 @@ main {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+  a {
+    &:hover {
+      color: #4d9215;
+    }
+  }
   &__email {
     display: flex;
     align-items: center;
@@ -294,6 +305,11 @@ main {
     padding-top: 6px;
     &-wrapper {
       position: relative;
+      &:hover {
+        .c-contacts__phone-content-text {
+          color: #4d9215;
+        }
+      }
     }
     &-icon {
       width: 20px;

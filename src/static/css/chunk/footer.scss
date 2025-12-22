@@ -1,12 +1,22 @@
 .footer {
   background-color: rgba(44, 73, 44, 1);
   color: #fff;
+
+  a {
+    &:hover {
+      color: #d1f349;
+    }
+  }
   .c-contacts__phone-dropdown,
   .c-submenu {
     top: unset;
     bottom: 100%;
   }
-
+  .c-submenu-item {
+    &:hover {
+      color: #4d9215 !important;
+    }
+  }
   &__top {
     display: flex;
     align-items: flex-start;
@@ -87,6 +97,12 @@
         text-decoration-thickness: 0%;
         text-decoration-skip-ink: auto;
         color: #d1f349;
+        &:hover {
+          color: #4d9215;
+          a {
+            color: #4d9215;
+          }
+        }
       }
     }
   }
@@ -98,6 +114,11 @@
 
     .c-menu-item:hover {
       color: rgba(209, 243, 73, 1);
+    }
+    .c-menu-link {
+      &:hover {
+        color: #d1f349;
+      }
     }
     .c-menu-link-icon {
       color: #fff;
@@ -139,6 +160,16 @@
       display: block;
     }
     .c-contacts__phone-wrapper {
+      .c-contacts__phone-dropdown-link {
+        &:hover {
+          color: #4d9215;
+        }
+      }
+      &:hover {
+        .c-contacts__phone-content-text {
+          color: #d1f349 !important;
+        }
+      }
       @include max-md {
         display: none;
       }
